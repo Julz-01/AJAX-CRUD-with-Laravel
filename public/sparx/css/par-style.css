@@ -1,0 +1,437 @@
+/*
+Theme Name: SPARX - PARTICLES - Version: 2
+Description:  Designed by josweb.
+Author:  Jo
+Purchase:  http://themeforest.net/user/josweb
+
+01. GENERAL STYLING
+02. INTRO PAGE
+03. SUBSCRIBE PAGE
+04. COUNTDOWN PAGE
+05. ABOUT PAGE
+06: PRELOADER
+07: PARTICLES
+08: MEDIA QUERIES
+*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	01: GENERAL STYLING
+/*-----------------------------------------------------------------------------------*/	
+
+html, body { height: 100%; padding: 0; margin: 0; }
+
+body { 
+	background-color: #121420;
+ 	font:16px/24px 'Lato', sans-serif;
+	color:#fff;
+	font-weight: 400;
+	text-align:center;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	height: 100%;
+	width: 100%;
+	overflow:hidden;
+}
+
+html { font-size:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; height:100%;}
+a, a:visited, a:hover, a:active, a:focus, input, select, textarea { outline:none; text-decoration:none; }
+a, li { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+:focus, .btn:focus { outline: 0; }
+.wow { visibility: hidden; }
+img { display:block; height:auto; max-width:100%; vertical-align:top; ms-interpolation-mode:bicubic; opacity:1.0; width: auto\9;}
+
+/**** LINKS ****/
+a {
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/**** PADDING ****/
+.pad90 { padding-top: 90px; }
+.pad60 { padding-top: 60px; }
+.pad45 { padding-top: 45px; }
+.pad35 { padding-top: 35px; }
+.pad30 { padding-top: 30px; }
+.pad25 { padding-top: 25px; }
+.pad19 { padding-top: 19px; }
+.pad20 { padding-top: 20px; }
+.pad15 { padding-top: 15px; }
+.pad10 { padding-top: 10px; }
+.pad5 { padding-top: 5px; }
+.marg-right5 { margin-right: 5px; }
+.marg-left5 { margin-left: 5px; }
+.marg-right20 { margin-right: 20px; }
+
+/**** PAGE SLIDE ****/
+.mm-menu { background: none !important; z-index: 0;}
+.mm-menu > .mm-panel { padding-top: 0;  position: relative; }
+
+/**** CENTER LEFT / RIGHT CONTENT ****/
+.block {
+  	position: relative;
+	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+/**** CENTER FRONT CONTENT ****/
+.content {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 1%;
+	right: 1%;
+	  z-index: 9999999999!important;
+	text-align:center;
+}
+
+/**** CLOSE BUTTON ****/
+.close, #close {
+	font-size: 35px;
+	background: transparent;
+	color: #fff;
+	opacity: 0.6;
+	cursor: pointer;
+	border: 0;-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.close:hover, #close:hover  { opacity: 0.8; color: #fff; }
+
+/**** TYPOGRAPHY ****/
+h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif; color:#fff; }
+
+p { margin: 20px 0; }
+.lead { font-size: 28px; color: #fff; padding: 0 0 20px; font-weight:300;}
+
+.content h1, h1  {
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+    letter-spacing: -1px;
+	font-size: 95px;
+	line-height: 1em;
+	font-weight: 700;
+	padding: 10px 0 0;
+	text-transform: none;
+}
+.content h1  { margin: 30px auto 0; text-transform: uppercase; }
+
+.soon{
+	margin: 0px auto;
+	text-align: center;
+	color: #fff;
+	letter-spacing: 6px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+/**** SVG ICONS FALLBACK ****/
+/* Fallback for browsers that don't support SVG - Generated with http://iconizr.com/ */
+.no-svg .si-icon-clock { background-image: url('../img/clock.png') }
+.no-svg .si-icon-hourglass { background-image: url('../img/hourglass.png') }
+.no-svg .si-icon-mail { background-image: url('../img/mail.png') }
+.no-svg .si-icon-flag { background-image: url('../img/flag.png') }
+.si-icons { cursor:pointer; }
+
+/**** OVERLAY & BACKGROUND ***/
+.vegas-overlay {
+	background: transparent url(../img/overlay.png);
+	opacity: 0.5;
+	z-index: -1;
+}
+.vegas-background {
+	-ms-interpolation-mode: bicubic;
+	image-rendering: optimizeQuality;
+    max-width: none !important; 
+	z-index: -2;
+}
+.vegas-overlay, .vegas-background {
+	-webkit-user-select: none;
+	 -khtml-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	02: INTRO PAGE
+/*-----------------------------------------------------------------------------------*/	
+
+/**** LOGO ****/
+.logo { margin: 0 auto 8px; }
+
+/**** LAUNCHING/SUBSCRIBE LINKS ****/
+.link-effect a {
+	display: inline-block;
+	position:relative;
+	font-size: 18px;
+	text-transform: lowercase;
+	letter-spacing: 4px;
+	padding: 10px;
+	margin: 20px 5px;
+	color: #fff;
+	font-weight: 700;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+	outline: none;
+	text-decoration: none;
+}
+.link-effect a::before, .link-effect a::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+.link-effect a::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+.link-effect a::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+.link-effect a:hover, .link-effect a:focus { color: #fff; }
+.link-effect a:hover::before, .link-effect a:focus::before, .link-effect a:hover::after, .link-effect a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+.size { font-size: 13px; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	03: SUBSCRIBE PAGE
+/*-----------------------------------------------------------------------------------*/	
+
+/**** SUBSCRIBE FORM ****/
+#ajax-contact-form{ margin-top:30px; }
+
+#ajax-contact-form input{
+	background: transparent;
+	color: #f0f0f0!important;
+	background:rgba(255,255,255,.2); 
+	border-left: 0px none;
+	border-right: 0px none;
+	border-top: 0px none;
+	border-bottom: 0px none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-box-border-radius: 6px;
+	-moz-box-border-radius: 6px;
+	border-radius: 6px;
+	margin-bottom: 15px;
+	padding: 8px 10px;
+	font-weight: 400;
+	font-size: 16px;
+}
+::-webkit-input-placeholder { color: #f0f0f0; opacity: 1.0; }
+:-moz-placeholder { color: #f0f0f0; opacity:1.0; }
+::-moz-placeholder { color: #f0f0f0; opacity:1.0; }
+:-ms-input-placeholder { color: #fff; opacity:1.0; }
+focus::-webkit-input-placeholder { color: transparent; opacity: 1.0;}
+#ajax-contact-form input:focus { color: #f0f0f0; outline: none; }
+input { outline: none; }
+
+/**** BUTTON ****/
+.btn, .btn:focus, .btn:active:focus {
+	display: inline-block;
+	margin: 15px auto;
+	padding: 25px 60px;
+	color: #fff;
+	font-size: inherit;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	background: none;
+	border: 2px solid #fff;
+	-webkit-box-border-radius: 0px;
+	-moz-box-border-radius: 0px;
+	border-radius: 0px;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.btn:hover { color: #fff; background:rgba(255,255,255,.15); outline: none; border: 2px solid #fff; }
+
+.notification_ok {
+    color: #fff;
+	opacity: 0.5;
+	font-weight: 400;
+    height: auto;
+    margin: 25px auto;
+    padding: 0px;
+    text-align: center;
+	font-size: 20px;
+	line-height: 28px
+	width: 100%;
+	clear: both; 	
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	04: COUNTDOWN PAGE
+/*-----------------------------------------------------------------------------------*/	
+
+/**** COUNTDOWN ****/
+.counter {
+	margin: 0 0 0 -30px;
+    text-align: center;
+    position: relative;
+}
+.countdown li {
+    margin: 20px auto 0;
+    display: inline-block!important;
+    text-align: center;
+}
+.number { font-size: 50px; line-height: 15px; color: #fff; font-weight: 700; }
+.time {
+	font-size: 13px;
+    margin-top: 5px;
+	text-transform: uppercase;
+    color: #fff;
+	width: 110px;
+	display: block;
+	background: transparent;
+}
+
+/**** SOCIAL ICONS ****/
+#social-icons ul { padding: 0; list-style-type: none; margin: 40px auto 0; }
+#social-icons ul li { display: inline; }
+#social-icons ul li a {
+	color: #fff;
+	font-size: 30px;
+	margin: 0px 8px;
+	line-height: 40px;
+}
+#social-icons ul li a:hover { opacity:0.8; }
+#social-icons a, #social-icons a:visited, #social-icons a:hover, #social-icons a:active, #social-icons a:focus { outline:none; text-decoration:none; background:transparent; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	05: ABOUT PAGE
+/*-----------------------------------------------------------------------------------*/
+#overlay { 
+	display: none;
+	background:rgba(0, 0, 0, 0.5) ;
+    position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%; 
+	min-height: 100%;
+	top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+.overlay-content {
+	display: none;
+	height: 100%;
+	padding-top: 20px;
+	text-align: left;
+}
+.overlay-content h4 { line-height: 30px; }
+.overlay-content h5 { line-height: 28px; }
+.fa-li { margin-left: -8px; padding-top: 1px; }
+.fa-ul { line-height: 25px!important; }
+.copyright { text-align: center; font-size: 12px; padding: 90px 0 40px;	 }
+.overlay-content .lead { text-align: center; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	06: PRELOADER
+/*-----------------------------------------------------------------------------------*/
+#preloader {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background-color: #121420;
+	z-index: 9999;
+}
+.status1 {
+	width: 50px; height:50px;
+	position: absolute;
+	left: 50%; top: 45%;
+	margin: -25px 0 0 -25px;
+	color: #fff;
+}
+.status2 {
+	width: 100px; height:36px;
+	position: absolute;
+	left: 50%; top: 50%;
+	margin: -18px 0 0 -50px;
+	background: url(../img/preloader.png);
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	07: PARTICLES
+/*-----------------------------------------------------------------------------------*/	
+
+#particles-js {
+	width: 100%;
+    height: 100%;
+	position: fixed ;
+	display: block;
+    z-index: -10;
+    top: 0;
+    left: 0;
+}
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#page-right, #page-left{ 
+	position: relative;
+    z-index: 999;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	08: MEDIA QUERIES
+/*-----------------------------------------------------------------------------------*/
+
+@media all and (max-width: 568px) {
+.content h1, h1 { font-size: 45px!important; }
+.soon { font-size: 12px; }
+.content { padding: 40px 0 20px!important; }
+.vegas-overlay, .vegas-background { min-height:100%!important; }
+.link-effect  a{  margin: 10px  0px!important; font-size:14px;}
+.block {
+	position: relative;
+	top: 0% !important;
+	margin: 40px auto!important;
+  	-webkit-transform: none !important;
+  	-ms-transform: none !important;
+	-o-transform: none !important;
+  	transform: none !important;}
+.overlay-content h1 { text-align: left!important; margin-left: 12px!important; }
+.overlay-content .text-center { text-align: left!important; margin-left: 5px!important; }
+.status2 { top: 55%!important; }
+}
